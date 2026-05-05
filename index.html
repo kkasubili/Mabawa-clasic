@@ -1,322 +1,199 @@
-
+            <!DOCTYPE html>
 <html lang="sw">
 <head>
-<title>School mngement system</title>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <title>School Management System</title>
 
-<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    
+    <!-- Font Awesome -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
 
     <style>
-       *{
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
+        *{
+            margin:0;
+            padding:0;
+            box-sizing:border-box;
         }
+
         body{
             text-align: justify;
-
         }
+
         nav{
-           
-            list-style: none;
             position: fixed;
             height: 80px;
             background-color: skyblue;
             width: 100%;
-            z-index: 1;
-            text-decoration: none;
+            z-index: 1000;
+        }
+
+        ul{
+            list-style: none;
+            float: right;
+            margin-right: 20px;
+        }
+
+        li{
             display: inline-block;
+            line-height: 80px;
+            margin: 0 10px;
         }
-        li,ul{
-           display: inline-block;
-            font-size: 14px;
-            font-weight: bold;
-            float:right;
-             line-height: 70px;
-             margin: 0 5px;
-        }
-         li,ul,a{text-decoration: none;
-           
-         }
+
         a{
-        text-decoration: none;
-         color: white;
-       
-        }
-        a:hover{
-          border-bottom: 4px solid darkcyan;
-        }
-        .logo{
-            font-size: 15px;
-            position: relative;
-            left: 5%;
+            text-decoration: none;
+            color: white;
             font-weight: bold;
-             line-height: 70px;
         }
-    .image{
-        width: 100%;
-        height: 300px;
-       
-    }
+
+        a:hover{
+            border-bottom: 3px solid darkcyan;
+        }
+
+        .logo{
+            color: white;
+            font-size: 18px;
+            line-height: 80px;
+            margin-left: 20px;
+            font-weight: bold;
+        }
 
         .section1{
-        padding-top: 70px;
+            padding-top: 100px;
         }
 
-        .img-label{
-             font-weight: bold;
-             font-size: 23px;
-             text-align: center;
-             align-items: center;
-             padding: 20px;
-             margin-bottom: 50px;
-             color: white;
-             background-color:  darkblue;
-             padding: 8px;
-          
-            
-             
-        }
-        .container2{
-        background-image: url("clssroom.png");
-        color: white;
-        animation:change 30s infinite;
-        position: relative;
-        width: 100%;
-        text-align: center;
-        background-position: center;
-        border-radius: 10px;
-        overflow: hidden;
-        height: 400px;
-       
-        background-size: cover;
-       }
-        
-       @keyframes change{
-        0%{background-image:url("clssroom.png");opacity: 1;}
-         40%{background-image:url("shule2.jpg");opacity: 0.9;}
-          70%{background-image:url("computer-lab-computers.jpg");opacity: 0.9;color: white;}
-          90%{background-image:url("lab.jpg");opacity: 0.7;}
-         90%{background-image:url("clssroom.png");opacity: 0.5;}
-         
-       }
-    
         .welcome{
             width: 100%;
-            height: 250px;
+            height: 200px;
+            object-fit: cover;
         }
-        .container{
-            padding-top: 70px;
-            margin: 10px;
-            border-radius: 5px;
+
+        footer{
+            width: 100%;
+            background:#222;
+            color:#fff;
+            text-align:center;
+            padding:20px;
+            margin-top:30px;
         }
-       
-    form{
-        padding-top: 60px;
-        
-    }
-    input{
-        padding: 10px;
-        border: 1px solid black;
-        border-radius: 3px;
-        width: 100%;
-       
-    }
-    card{background:#fff;
-        border-radius:12px;
-        padding:16px;
-        box-shadow:0 6px 18px rgba(10,10,10,0.06)
-    }
-    .top-card{
-        background-color: darkcyan;
-        height: 50px;
-    }
-    .form-card{
-        background-color: ghostwhite;
-        padding: 10px;
-        align-items: center;text-align: center;
 
-    }
-    .form-label{
-        padding-right: 10px;
-        width: 100px;
-        font-weight: bold;
-        text-align: right;
-        display: inline-block;
-    }
-   
-       
-
-   
-    button:hover{
-        background-color: blue;
-        color: white;
-        border: navy;
-         box-shadow: 0 6px darkblue;
-           width: 150px;;
-    }
-    .text{
-        width: 50%;
-        height: 50px;
-    }
-    #submit{
-        position: relative;
-        width: 20%;
-        left: 5%;
-    }
-    
-        
-
-    }
-     .footer-text{
-        top: 20%;
-        position: relative;
-     }
-     .social-icons{
-       
-        display: inline-block;
-       
-      
-       
-     }
-     .tuma{
-       display: none;
-       text-align: center;
-       font-weight: bold;
-       letter-spacing: 3px;
-     }
+        #sent{
+            display: none;
+        }
     </style>
-
 </head>
+
 <body>
+
+<!-- NAVBAR -->
 <nav>
-<label class="logo">K-Learning platform</label>
-<ul>
-<li> <a href="youtube.com">Home</a></li>
-<li> <a href="#">Admin</a></li>
-<li> <a href="youtube.com" style="color: darkcyan;">Login</a></li>
-</ul>
+    <span class="logo">K-Learning</span>
+    <ul>
+        <li><a href="#">Home</a></li>
+        <li><a href="#">About</a></li>
+        <li><a href="#">Services</a></li>
+        <li><a href="#">Contact</a></li>
+    </ul>
 </nav>
 
-<br>
-<div class="container2">
-<br><br><br><br><br><br>
-<label class="img-label">Building systems today owning the future tommorrow</label>
-
-</div>
-<div class="container">
+<!-- SECTION 1 -->
+<div class="container section1">
     <div class="row">
         <div class="col-md-4">
-             <img class="welcome" src="shule2.jpg">
+            <img class="welcome" src="shule2.jpg" alt="">
         </div>
-<div class="col-md-8">
-<h2>Welcome to K-Learning</h2>
-<p>A stdent Mangement system is  digital platform Created by kasubili that helps schools and institutions manage students information
-    effrctively. it stores important data such as stdent details, marks attendnce and academic performance in one centalized system
-    .This redce manual papeer work,saves times, and improves accrracy in handling records.
-</p>
-<p>The system also supports a real time updates, allowing staff to access the most current informtion at ny any time. Also en
-  nable users or techers to search for students recordsand making information proccesses faster and more reliable.  
-</p>
-    </div>
-</div>
-            </div>
+
+        <div class="col-md-8">
+            <h2>Welcome to K-Learning</h2>
+            <p>
+                A Student Management System is a digital platform that helps schools manage student information effectively.
+                It stores details such as student records, marks, attendance, and academic performance in one centralized system.
+            </p>
+            <p>
+                The system supports real-time updates and allows teachers to access and search records quickly and efficiently.
+            </p>
         </div>
     </div>
 </div>
-<center>
-<h3>Techers & Students resources</h3>
-<div style="border: 3px solid darkcyan; width: 400px;"></div>
-</center>
-<br>
-<div class="container">
-    <div class="row">
+
+<!-- RESOURCES -->
+<div class="text-center mt-5">
+    <h3>Teachers & Students Resources</h3>
+    <div style="border:3px solid darkcyan; width:300px; margin:auto;"></div>
+</div>
+
+<div class="container mt-4">
+    <div class="row text-center">
+        
         <div class="col-md-4">
-        <a href="" style="color: black;"><label><h3>T/Learning materials</h3></label></a> 
-         <img onclick="lineBorder()" class="welcome" src="lesson.jpg">
-        <p>Get Teching and Lerning materials as well as supplementary materiaals for students easy to understand. </p>
+            <h4>T/Learning Materials</h4>
+            <img onclick="lineBorder()" class="welcome" src="lesson.jpg">
+            <p>Get teaching and learning materials for students.</p>
         </div>
+
         <div class="col-md-4">
-             <label><h3 id="line">O-level practicals & tutorials</h3></label>
-        <a href="" ><img class="welcome" src="B103.jpg"></a>
-        <p>Get practicals for chemistry nd biology subjects.</p>
+            <h4 id="line">O-level Practicals</h4>
+            <img class="welcome" src="B103.jpg">
+            <p>Get practicals for science subjects.</p>
         </div>
+
         <div class="col-md-4">
-        <label><h3>Get lesson plan new crriculum</h3></label>
-           <img class="welcome" src="lesson.png">
-        <p>Teachers Lesson plan and scheme of work are available for
-            ll subjects. for new curriculum.
-        </p>
+            <h4>Lesson Plans</h4>
+            <img class="welcome" src="lesson.png">
+            <p>Lesson plans and schemes of work available.</p>
         </div>
-          <center>
-<h3 style="padding-top: 70px;">Add your Description about us</h3>
-<div style="border: 3px solid darkcyan; width: 400px;"></div>
-          <form method="post" action="submit.php" onsubmit="return false">
-            <div class="top-card"></div>
-            <div class="form-card">
-
-            <label for="name" class="form-label">Name:</label>
-             <input type="text" name="name" placeholder="Enter your name.." required><br><br>
-
-             <label for="name" class="form-label">Email</label>
-             <input type="email" name="email" placeholder="Enter your email..." required><br><br>
-
-            <label for="name" class="form-label">Message</label>
-           <textarea class="text" name="message"></textarea><br><br>
-
-            <button name="submit" onclick="submitBtn()" type="submit" class="btn btn-primary" id="submit" value="apply" >Submit</button>
-          </form>
-            </div>
-        </div>
-    <p style="color: green;" id="sent" class="tuma">Your message submited successfully</p>
-</center>
-    
-   
 
     </div>
 </div>
-<footer style="background:#222; color:#fff; padding:20px 10px; text-align:center; margin-top:30px;">
-  
-  <div style="margin-bottom:10px;">
-    <h3 style="margin:0; font-family:Arial;">School Management System</h3>
-  </div>
 
-  <div style="margin:10px 0;">
-    <a href="#" style="color:#fff; margin:0 10px; text-decoration:none;">Home</a>
-    <a href="#" style="color:#fff; margin:0 10px; text-decoration:none;">About</a>
-    <a href="#" style="color:#fff; margin:0 10px; text-decoration:none;">Services</a>
-    <a href="#" style="color:#fff; margin:0 10px; text-decoration:none;">Contact</a>
-  </div>
+<!-- FORM -->
+<div class="text-center mt-5">
+    <h3>Contact Us</h3>
+    <div style="border:3px solid darkcyan; width:300px; margin:auto;"></div>
 
-  <div style="margin:10px 0;">
-    <a href="#" style="color:#1da1f2; margin:0 8px; text-decoration:none;">Facebook</a>
-    <a href="#" style="color:#1da1f2; margin:0 8px; text-decoration:none;">Twitter</a>
-    <a href="#" style="color:#1da1f2; margin:0 8px; text-decoration:none;">Instagram</a>
-  </div>
+    <form class="mt-3" onsubmit="submitBtn(); return false;">
+        <input type="text" placeholder="Enter your name" class="form-control w-50 mx-auto mb-2" required>
+        <input type="email" placeholder="Enter your email" class="form-control w-50 mx-auto mb-2" required>
+        <textarea placeholder="Message" class="form-control w-50 mx-auto mb-2"></textarea>
 
-  <hr style="border:0; border-top:1px solid #444; margin:15px 0;">
+        <button class="btn btn-primary">Submit</button>
+    </form>
 
-  <p style="margin:0; font-size:14px;">
-    © 2026 School Management System | All Rights Reserved
-  </p>
+    <p id="sent" style="color: green;">Your message submitted successfully</p>
+</div>
 
+<!-- FOOTER -->
+<footer>
+    <h3>School Management System</h3>
+
+    <div>
+        <a href="#">Home</a> |
+        <a href="#">About</a> |
+        <a href="#">Services</a> |
+        <a href="#">Contact</a>
+    </div>
+
+    <div style="margin-top:10px;">
+        <a href="#" style="color:#1da1f2;">Facebook</a> |
+        <a href="#" style="color:#1da1f2;">Twitter</a> |
+        <a href="#" style="color:#1da1f2;">Instagram</a>
+    </div>
+
+    <p style="margin-top:10px;">© 2026 School Management System | All Rights Reserved</p>
 </footer>
-    </body>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js">
-      
-    </script>
-    <script>
-          function lineBorder(){
-            document.getElementById("line").style.border="4px solid darkcyn;height:";
-        }
-        function submitBtn(){
-                       document.getElementById("sent").style.display = "block";
- 
-        }
-    </script>
 
+<!-- JS -->
+<script>
+    function lineBorder(){
+        document.getElementById("line").style.border = "4px solid darkcyan";
+    }
+
+    function submitBtn(){
+        document.getElementById("sent").style.display = "block";
+    }
+</script>
+
+</body>
 </html>
